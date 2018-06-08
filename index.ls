@@ -26,7 +26,7 @@ root =
 
 ReactDOM.render root, document.getElementById('app'), ->
   questions.forEach (question, i) ->
-    counts = Array 4 .fill 0
+    counts = [0, 0, 0, 0]
     comments.forEach (comment) ->
       counts[comment[i] - 1]++
     Highcharts.chart 'container' + i, do
