@@ -41,6 +41,10 @@ ReactDOM.render root, document.getElementById('app'), ->
         categories: ['非常同意', '同意', '不同意', '非常不同意']
       yAxis: {title: {text: null}}
       series: [{showInLegend: false, name: '票數', data: counts}]
+      plotOptions:
+        column:
+          dataLabels:
+            enabled: true
   pieColors = do ->
     colors = []
     base = Highcharts.getOptions!colors[0]
